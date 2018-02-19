@@ -1,10 +1,24 @@
-<mvc:View controllerName="mdpMasterDetailPOC.controller.Selection_Screen" xmlns:html="http://www.w3.org/1999/xhtml"
-	xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
-	<App>
-		<pages>
-			<Page title="{i18n>title}">
-				<content></content>
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	controllerName="mdpMasterDetailPOC.controller.Selection_Screen" displayBlock="true">
+	<SplitApp>
+		<masterPages>
+			<Page title="Sales Orders">
+				<List items="{/Orders}">
+					<items>
+						<ObjectListItem title="{OrderID}" type="Active">
+							<attributes>
+								<ObjectAttribute title="Customer ID" text="{CustomerID}"/>
+								<ObjectAttribute title="Order Date" text="{path: 'OrderDate', type: 'sap.ui.model.type.Date', formatOptions: {style:'medium'}}"/>
+							</attributes>
+						</ObjectListItem>
+					</items>
+				</List>
 			</Page>
-		</pages>
-	</App>
+		</masterPages>
+		<detailPages>
+			<Page title="Sales Orders Details">
+				
+			</Page>
+		</detailPages>
+	</SplitApp>
 </mvc:View>

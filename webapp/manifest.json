@@ -12,6 +12,15 @@
 		"sourceTemplate": {
 			"id": "ui5template.basicSAPUI5ApplicationProject",
 			"version": "1.40.12"
+		},
+		"dataSources": {
+			"NorthWind": {
+				"uri": "/northwind/V2/Northwind/Northwind.svc/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0"
+				}
+			}
 		}
 	},
 
@@ -64,6 +73,9 @@
 				"settings": {
 					"bundleName": "mdpMasterDetailPOC.i18n.i18n"
 				}
+			},
+			"": {
+				"dataSource": "NorthWind"
 			}
 		},
 		"resources": {
